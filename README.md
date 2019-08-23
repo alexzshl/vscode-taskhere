@@ -2,6 +2,9 @@
 
 This is the README for your extension "vscode-taskson". After writing up a brief description, we recommend including the following sections.
 
+This project depends on:
+[](https://github.com/actboy168/vscode-tasks)
+
 ## Features
 
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
