@@ -1,13 +1,24 @@
 {
-	"name": "vscode-extension-taskhere",
+	"name": "task-here",
 	"author": {
-		"name": "alexzshl",
-		"email": "alexzshl@126.com"
+		"name": "alexzshl"
 	},
 	"publisher": "alexzshl",
-	"displayName": "TaskHere",
-	"description": "loads vscode tasks to status bar",
 	"version": "1.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/alexzshl/vscode-taskhere"
+	},
+	"bugs": {
+		"url": "https://github.com/alexzshl/vscode-taskhere/issues"
+	},
+	"displayName": "Tasks Here",
+	"description": "loads vscode tasks to status bar",
+	"keywords": [
+		"tasks",
+		"status bar"
+	],
+	"icon": "logo.png",
 	"engines": {
 		"vscode": "^1.37.0"
 	},
