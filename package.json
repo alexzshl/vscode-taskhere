@@ -7,11 +7,12 @@
 	"version": "1.0.2",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/alexzshl/vscode-taskhere"
+		"url": "https://github.com/alexzshl/vscext-taskhere"
 	},
 	"bugs": {
-		"url": "https://github.com/alexzshl/vscode-taskhere/issues"
+		"url": "https://github.com/alexzshl/vscext-taskhere/issues"
 	},
+	"homepage": "https://github.com/alexzshl/vscext-taskhere",
 	"displayName": "Tasks Here",
 	"description": "loads vscode tasks to status bar",
 	"keywords": [
