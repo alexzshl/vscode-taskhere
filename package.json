@@ -28,28 +28,47 @@
 	],
 	"activationEvents": [
 		"workspaceContains:**/tasks.json",
-		"onCommand:extension.taskhere.on"
+		"onCommand:extension.taskshere.on"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.taskhere.on",
+				"command": "extension.taskshere.on",
 				"title": "active",
-				"category": "Task Here"
+				"category": "Tasks Here"
 			},
 			{
-				"command": "extension.taskhere.off",
+				"command": "extension.taskshere.off",
 				"title": "deactive",
-				"category": "Task Here"
+				"category": "Tasks Here"
 			}
 		],
 		"configuration": {
-			"title": "Task Here",
+			"title": "Tasks Here",
 			"properties": {
-				"taskhere.on": {
+				"taskshere.on": {
 					"type": "boolean",
-					"default": true
+					"default": true,
+					"description": "active"
+				},
+				"taskshere.tasks": {
+					"type":"object",
+					"properties": {
+						"task-label": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string",
+									"default": "test"
+								},
+								"display": {
+									"type": "string",
+									"enum": ["show", "hide"]
+								}
+							}
+						}
+					}
 				}
 			}
 		}

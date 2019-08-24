@@ -31,12 +31,6 @@
 				"${workspaceFolder}/out/test/**/*.js"
 			],
 			"preLaunchTask": "npm: watch"
-		},
-		{
-			"type": "node",
-			"request": "launch",
-			"name": "Launch Program",
-			"program": "${workspaceFolder}/out/demo/${fileBasenameNoExtension}"
-		},
+		}
 	]
 }
