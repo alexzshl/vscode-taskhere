@@ -2,7 +2,6 @@
 	"name": "vscode-extension-taskhere",
 	"author": {
 		"name": "alexzshl",
-		"email": "alexzshl@126.com"
 	},
 	"publisher": "alex",
 	"displayName": "TaskHere",
