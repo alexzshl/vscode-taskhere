@@ -1,5 +1,5 @@
 {
-	"name": "task-here",
+	"name": "tasks-here",
 	"author": {
 		"name": "alexzshl"
 	},
@@ -7,12 +7,12 @@
 	"version": "2.1.2",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/alexzshl/vscext-taskhere"
+		"url": "https://github.com/alexzshl/vscode-taskshere"
 	},
 	"bugs": {
-		"url": "https://github.com/alexzshl/vscext-taskhere/issues"
+		"url": "https://github.com/alexzshl/vscode-taskshere/issues"
 	},
-	"homepage": "https://github.com/alexzshl/vscext-taskhere",
+	"homepage": "https://github.com/alexzshl/vscode-taskshere",
 	"displayName": "Tasks Here",
 	"description": "loads vscode tasks to status bar",
 	"keywords": [

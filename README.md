@@ -1,4 +1,4 @@
-# Task Here
+# Tasks Here
 
 loads vscode-tasks to status bar
 
@@ -7,8 +7,7 @@ This project evolved from the following project:
 
 ## Extension Settings
 
-Ctrl+Shift+P
-search taskshere and active or deactive extension
+
 
 ## Preview
 
@@ -34,7 +33,7 @@ By default, this extension will show all vscode-tasks on the status bar.If you w
         }
 ```
 
-By default, this extension uses the label of the task as the display name on the status bar. But if these names are too long to fit for display, you can customize the name with the following configuration:
+By default, this extension uses the label of the task as the display name on the status bar. But if these names are too long to fit for display and also you don't want to change it, you can customize the name with the following configuration:
 
 ```json
         {
@@ -69,3 +68,5 @@ If you prefer, you can even customize a name with an icon to help you better dis
 You can find a list of built-in icons provided by VSCode on this page: [icons-in-labels](https://code.visualstudio.com/api/references/icons-in-labels)
 
 ![name with icon](https://raw.githubusercontent.com/alexzshl/vscode-taskhere/master/src/resource/labelwithicon.png)
+
+Ctrl+Shift+P: search taskshere to active or deactive extension actions
