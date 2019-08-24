@@ -1,13 +1,13 @@
 # Tasks Here
 
-loads vscode-tasks to status bar
+Load VSCode Tasks to Status Bar
 
 This project evolved from the following project:
 [vscode-tasks](https://github.com/actboy168/vscode-tasks)
 
 ## Preview
 
-[![preview](resource/image/preview.png)
+![preview](resource/image/preview.png)
 
 ## Settings
 

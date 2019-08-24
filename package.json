@@ -14,7 +14,7 @@
 	},
 	"homepage": "https://github.com/alexzshl/vscode-taskshere",
 	"displayName": "Tasks Here",
-	"description": "loads vscode tasks to status bar",
+	"description": "Load VSCode Tasks to Status Bar",
 	"keywords": [
 		"tasks",
 		"status bar"

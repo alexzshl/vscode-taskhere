@@ -167,8 +167,6 @@ function loadTasks(context: vscode.ExtensionContext) {
 		}
 	}
 
-	console.log(conf);
-
 	vscode.tasks.fetchTasks().then(async (tasks) => {
 		for (const task of tasks) {
 			let taskId = task.name + ',' + task.definition.id;
@@ -187,7 +185,7 @@ function loadTasks(context: vscode.ExtensionContext) {
 
 			const bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 50);
 			bar.text = name;
-			bar.command = 'alexzshl.vscodeTasks.exec-task_' + commandIndex++;
+			bar.command = 'alexzshl.tasksHere.exec-task-' + commandIndex++;
 			// bar.command = 'extension.alexzshl.vscodeTasks.' + task.name;
 			bar.show();
 			// bar.tooltip = task.definition.id;
@@ -200,7 +198,6 @@ function loadTasks(context: vscode.ExtensionContext) {
 			commandHandleArrray.push(disposable);
 			context.subscriptions.push(disposable);
 		}
-
 	});
 }
 
