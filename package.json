@@ -4,7 +4,7 @@
 		"name": "alexzshl"
 	},
 	"publisher": "alexzshl",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/alexzshl/vscext-taskhere"
@@ -53,7 +53,7 @@
 					"description": "active"
 				},
 				"taskshere.tasks": {
-					"type":"object",
+					"type": "object",
 					"properties": {
 						"task-label": {
 							"type": "object",
@@ -64,7 +64,10 @@
 								},
 								"display": {
 									"type": "string",
-									"enum": ["show", "hide"]
+									"enum": [
+										"show",
+										"hide"
+									]
 								}
 							}
 						}
