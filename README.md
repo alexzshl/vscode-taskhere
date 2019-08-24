@@ -7,7 +7,7 @@ This project evolved from the following project:
 
 ## Preview
 
-[![preview](https://raw.githubusercontent.com/alexzshl/vscode-taskshere/master/src/resource/preview.png)
+[![preview](resource/image/preview.png)
 
 ## Settings
 
@@ -63,6 +63,4 @@ If you prefer, you can even customize a name with an icon to help you better dis
 
 You can find a list of built-in icons provided by VSCode on this page: [icons-in-labels](https://code.visualstudio.com/api/references/icons-in-labels)
 
-![name with icon](https://raw.githubusercontent.com/alexzshl/vscode-taskhere/master/src/resource/labelwithicon.png)
-
-Ctrl+Shift+P: search taskshere to active or deactive extension actions
+![name with icon](resource/image/labelwithicon.png)

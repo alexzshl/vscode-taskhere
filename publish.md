@@ -1,5 +1,9 @@
 # How To Publish
 
+## Unique Identifier
+
+package.json -> publisher.name
+
 ## install tool
 
 ```shell
