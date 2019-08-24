@@ -19,7 +19,7 @@
 		"tasks",
 		"status bar"
 	],
-	"icon": "./resource/image/logo.png",
+	"icon": "resource/image/logo.png",
 	"engines": {
 		"vscode": "^1.37.0"
 	},
