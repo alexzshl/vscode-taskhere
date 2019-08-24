@@ -12,7 +12,7 @@ search taskshere and active or deactive extension
 
 ## Preview
 
-![preview](src\resource\preview.png)
+[![preview](src\resource\preview.png)](https://github.com/alexzshl/vscode-taskhere/blob/master/src/resource/preview.png?raw=true)
 
 ## Settings
 
