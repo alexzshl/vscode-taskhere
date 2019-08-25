@@ -187,8 +187,9 @@ function loadTasks(context: vscode.ExtensionContext) {
 			bar.text = name;
 			bar.command = 'alexzshl.tasksHere.exec-task-' + commandIndex++;
 			// bar.command = 'extension.alexzshl.vscodeTasks.' + task.name;
+			bar.tooltip = 'Task: ' + task.name;
 			bar.show();
-			// bar.tooltip = task.definition.id;
+
 			statusBarArray.push(bar);
 
 			context.subscriptions.push(bar);
