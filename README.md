@@ -2,8 +2,7 @@
 
 Load VSCode Tasks to Status Bar
 
-This project evolved from the following project:
-[vscode-tasks](https://github.com/actboy168/vscode-tasks)
+This extension evolved from **extension:actboy168.tasks**
 
 ## Preview
 
@@ -11,9 +10,11 @@ This project evolved from the following project:
 
 ## Settings
 
-For ease of configuration, this extension takes the form of directly configuring **tasks.json**
+We do some general configuration through the **settings.json**, as most extensions do.And also, for ease of configuration,we do some special configuration through the **tasks.json** for each task.If the configuration is done in the tasks.json, I will identify it above the code or image
 
-By default, this extension will show all vscode-tasks on the status bar.If you want to hide a task, add the following configuration:
+This extension will show all vscode-tasks on the status bar.If you want to hide a task, add the following configuration:
+
+[*tasks.json*]
 
 ```json
         {
@@ -29,28 +30,35 @@ By default, this extension will show all vscode-tasks on the status bar.If you w
         }
 ```
 
-By default, this extension uses the label of the task as the display name on the status bar. But if these names are too long to fit for display and also you don't want to change it, you can customize the name with the following configuration:
+This extension uses the label of the task as the display name on the status bar. How ever, if the task name is too long to fit for display and you don't want to change it, you can customize the name with the following configuration:
+
+[*tasks.json*]
 
 ```json
         {
             "type":"shell",
-            "label":"the label is long to show",
-            "command": "echo",
+            "label":"g++.exe build active file",
+            "command": "g++",
             "args": [
-                "arg1"
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "tasksHereName": "test"
+                "tasksHereName": "g++"
             }
         }
 ```
 
-If you prefer, you can even customize a name with an icon to help you better distinguish between tasks. This feature is provided by the VSCode API
+You can add an icon to the task name with a special syntax, which will appear as an icon on the status bar. This feature is natively provided by vscode
+
+[*tasks.json*]
 
 ```json
         {
             "type":"shell",
-            "label":"this label is to long to display",
+            "label":"test",
             "command": "echo",
             "args": [
                 "arg1"
@@ -61,6 +69,6 @@ If you prefer, you can even customize a name with an icon to help you better dis
         }
 ```
 
-You can find a list of built-in icons provided by VSCode on this page: [icons-in-labels](https://code.visualstudio.com/api/references/icons-in-labels)
+![icon-in-label](resource/image/text+icon.png)
 
-![name with icon](resource/image/labelwithicon.png)
+You can find a list of built-in icons provided by VSCode on this page: [icons-in-labels](https://code.visualstudio.com/api/references/icons-in-labels)
