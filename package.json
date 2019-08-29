@@ -4,7 +4,7 @@
 		"name": "alexzshl"
 	},
 	"publisher": "alexzshl",
-	"version": "2.2.1",
+	"version": "3.0.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/alexzshl/vscode-taskshere"
@@ -86,11 +86,11 @@
 			}
 		},
 		"jsonValidation": [
-            {
-                "fileMatch": "tasks.json",
+			{
+				"fileMatch": "tasks.json",
 				"url": "./resource/jshint.json"
-            }
-        ]
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
