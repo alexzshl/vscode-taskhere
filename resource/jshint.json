@@ -24,7 +24,7 @@
                             },
                             "tasksHereColor": {
                                 "type": "string",
-                                "default": "#0000ff",
+                                "default": "#1bbd4b",
                                 "format": "color",
                                 "description": "Custom task color\nWill be deprecated, please use \"taskshere\" instead"
                             },
@@ -44,7 +44,7 @@
                                     },
                                     "color": {
                                         "type": "string",
-                                        "default": "#0000ff",
+                                        "default": "#1bbd4b",
                                         "format": "color",
                                         "description": "Custom task color"
                                     }

@@ -2,9 +2,9 @@
 
 Load VSCode Tasks to Status Bar
 
-This extension evolved from *extension:actboy168.tasks*
+Version-3.0.0 starts to use the new configuration form, the previous users please try to migrate. If there is any inconvenience, please forgive me
 
-Version-3.0.0 starts to use the new configuration form, the previous users please try to migrate. If there is any inconvenience, please forgive me.
+This extension evolved from *extension:actboy168.tasks*
 
 ## Preview
 
@@ -81,7 +81,7 @@ You can "add" a built-in icon to the task name with a special syntax, which will
 
 You can find a list of built-in icons provided by VSCode on this page: [icons-in-labels](https://code.visualstudio.com/api/references/icons-in-labels)
 
-Specify the color of the task name.You can use legal color expressions supported by CSS. For example: "DeepPink", "#00f", "#adff2f". If you are not sure, you can use the search engine to search for the keyword "CSS color".Note that the color of the icon will change as well.
+Specify the color of the task name.You can use legal color expressions supported by CSS. For example: "DeepPink", "#00f", "#adff2f". If you are not sure, you can use the search engine to search for the keyword "CSS color".Or use the color picker(hover over the color string) provided by vscode to select the color directly..Note that the color of the icon will change as well.
 
 [*tasks.json*]
 
@@ -107,3 +107,5 @@ Specify the color of the task name.You can use legal color expressions supported
 ```
 
 ![label_color](resource/image/new/label_color.png)
+
+![label_color](resource/image/new/labe_color_selector.png)
