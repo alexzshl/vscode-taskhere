@@ -146,6 +146,7 @@ function loadTasks(context: vscode.ExtensionContext) {
 
 	let conf: any = {};
 
+	// get each task config
 	for (const workspaceFolder of vscode.workspace.workspaceFolders!) {
 		const config = vscode.workspace.getConfiguration('tasks', workspaceFolder.uri);
 		if (!config || !Array.isArray(config.tasks)) {
@@ -157,12 +158,15 @@ function loadTasks(context: vscode.ExtensionContext) {
 			if (id) {
 				conf[id] = {
 					display: undefined,
-					name: undefined
+					name: undefined,
+					color: undefined
 				};
 				let display = getValue2(task, config, "options", "tasksHereDisplay");
 				let name = getValue2(task, config, "options", "tasksHereName");
+				let color = getValue2(task, config, "options", "tasksHereColor");
 				conf[id]["display"] = typeof display === 'string'? display : undefined;
-				conf[id]["name"] = typeof name === 'string'? name : undefined;
+				conf[id]["name"] = typeof name === 'string' ? name : undefined;
+				conf[id]["color"] = typeof color === 'string' ? color : undefined;
 			}
 		}
 	}
@@ -188,6 +192,7 @@ function loadTasks(context: vscode.ExtensionContext) {
 			bar.command = 'alexzshl.tasksHere.exec-task-' + commandIndex++;
 			// bar.command = 'extension.alexzshl.vscodeTasks.' + task.name;
 			bar.tooltip = 'Task - ' + task.name;
+			bar.color = conf[taskId]["color"];
 			bar.show();
 
 			statusBarArray.push(bar);
@@ -217,13 +222,15 @@ function activate(context: vscode.ExtensionContext) {
 		});
 	}));
 
+	context.subscriptions.push(vscode.commands.registerCommand("extension.taskshere.refresh", async () => {
+		loadTasks(context);
+	}));
+
 	context.subscriptions.push(vscode.workspace.onDidChangeConfiguration(() => {
-		// console.log("onDidChangeConfiguration...");
 		loadTasks(context);
 	}));
 
 	context.subscriptions.push(vscode.workspace.onDidChangeWorkspaceFolders(() => {
-		// console.log("onDidChangeWorkspaceFolders...");
 		loadTasks(context);
 	}));
 
