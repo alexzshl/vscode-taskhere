@@ -32,10 +32,9 @@
                                 "type": "object",
                                 "properties": {
                                     "display": {
-                                        "type": "string",
-                                        "enum": ["hide", "show"],
-                                        "default": "hide",
-                                        "description": "set it as \"hide\"to hide the task on statusbar"
+                                        "type": "boolean",
+                                        "default": true,
+                                        "description": "set it as boolean-false to hide the task on statusbar"
                                     },
                                     "name": {
                                         "type": "string",

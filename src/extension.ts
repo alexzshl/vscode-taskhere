@@ -170,7 +170,8 @@ function loadTasks(context: vscode.ExtensionContext) {
 				let display = getValue2(task, config, "options", "tasksHereDisplay");
 				let name = getValue2(task, config, "options", "tasksHereName");
 				let color = getValue2(task, config, "options", "tasksHereColor");
-				conf[id]["display"] = typeof display === 'string'? display : undefined;
+
+				conf[id]["display"] = typeof display === 'string' ? display : undefined;
 				conf[id]["name"] = typeof name === 'string' ? name : undefined;
 				conf[id]["color"] = typeof color === 'string' ? color : undefined;
 
@@ -186,27 +187,35 @@ function loadTasks(context: vscode.ExtensionContext) {
 			if (task.source !== "Workspace") {
 				continue;
 			}
-			if (!(taskId in conf)) {
-				continue;
-			}
-			if (conf[taskId]["display"] === 'hide') {
-				continue;
-			}
-			if (!(taskId in conf_a)) {
-				continue;
-			}
-			if (conf_a[taskId]['display'] === 'hide') {
-				continue;
-			}
-			
-			let name = conf_a[taskId]["name"] || conf[taskId]["name"] || task.name;
 
-			const bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 50);
+			if (!(taskId in conf) || !(taskId in conf_a)) {
+				continue;
+			}
+
+			const display_g: boolean|undefined = vscode.workspace.getConfiguration().get("taskshere.display");
+			if (conf_a[taskId]['display'] !== undefined) {
+				if (!conf_a[taskId]['display']) {
+					continue;
+				}
+			} else if (conf[taskId]["display"] !== undefined) {
+				if (conf[taskId]["display"] === "hide") {
+					continue;
+				}
+			} else if (display_g !== undefined) {
+				if (!display_g) {
+					continue;
+				}
+			}
+
+			let name = conf_a[taskId]["name"] || conf[taskId]["name"] || task.name;
+			let priority: number | undefined = vscode.workspace.getConfiguration().get("taskshere.priority");
+			let color: string | undefined = vscode.workspace.getConfiguration().get("taskshere.color");
+			const bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, priority);
 			bar.text = name;
 			bar.command = 'alexzshl.tasksHere.exec-task-' + commandIndex++;
 			// bar.command = 'extension.alexzshl.vscodeTasks.' + task.name;
 			bar.tooltip = 'Task - ' + task.name;
-			bar.color = conf_a[taskId]["color"] || conf[taskId]["color"];
+			bar.color = conf_a[taskId]["color"] || conf[taskId]["color"] || color;
 			bar.show();
 
 			statusBarArray.push(bar);

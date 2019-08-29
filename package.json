@@ -57,10 +57,22 @@
 					"default": true,
 					"description": "active"
 				},
+				"taskshere.display": {
+					"type": "boolean",
+					"default": true,
+					"description": "Global display for status bar item"
+				},
 				"taskshere.color": {
 					"type": "string",
-					"default": "#000000",
-					"format": "color"
+					"format": "color",
+					"description": "Global color for status bar item"
+				},
+				"taskshere.priority": {
+					"type": "number",
+					"default": 50,
+					"minimum": 0,
+					"maximum": 9999,
+					"description": "The priority of the status bar item. Higher values mean the item should be shown more to the left"
 				},
 				"taskshere.tasks": {
 					"type": "object",
@@ -81,7 +93,8 @@
 								}
 							}
 						}
-					}
+					},
+					"description": "[Don't config this item]"
 				}
 			}
 		},

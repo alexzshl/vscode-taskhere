@@ -28,7 +28,7 @@ This extension will show all vscode-tasks on the status bar.If you want to hide 
             ],
             "options": {
                 "tasksHere": {
-                    "display": "hide"
+                    "display": false
                 }
             }
         }
