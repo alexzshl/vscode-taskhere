@@ -9,6 +9,7 @@ This extension evolved from *extension:actboy168.tasks*
 ## Preview
 
 ![preview](resource/image/preview.png)
+![preview](resource/image/new/preview_02.png)
 
 ## Settings
 
