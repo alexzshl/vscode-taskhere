@@ -1,8 +1,7 @@
 {
 	"name": "vscode-extension-taskhere",
 	"author": {
-		"name": "alexzshl",
-		"email": "alexzshl@126.com"
+		"name": "alexzshl"
 	},
 	"publisher": "alex",
 	"displayName": "TaskHere",
@@ -23,12 +22,12 @@
 		"commands": [
 			{
 				"command": "extension.taskhere.on",
-				"title": "active",
+				"title": "aaa",
 				"category": "Task Here"
 			},
 			{
 				"command": "extension.taskhere.off",
-				"title": "deactive",
+				"title": "bbb",
 				"category": "Task Here"
 			}
 		],
@@ -74,7 +73,14 @@
 					"default": 4
 				}
 			}
-		}
+		},
+		"jsonValidation": [
+            {
+                "fileMatch": "tasks.json",
+                "url": "./out/jshintrc.tasks.json"
+            }
+        ]
+
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

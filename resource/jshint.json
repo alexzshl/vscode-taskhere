@@ -1,5 +1,6 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "JSON schema for tasks.json by Tasks Here",
+    "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "properties": {
         "tasks": {
@@ -10,31 +11,46 @@
                     "options": {
                         "type": "object",
                         "properties": {
-                            "statusbar": {
+                            "tasksHereDisplay": {
                                 "type": "string",
-                                "enum": ["show", "hide"],
-                                "description": "provided by extension:tasks\nset it as \"hide\"to hide the task on statusbar"
+                                "enum": ["hide", "show"],
+                                "default": "hide",
+                                "description": "set it as \"hide\"to hide the task on statusbar\nWill be deprecated, please use \"taskshere\" instead"
                             },
-                            "statusbarLabel": {
+                            "tasksHereName": {
                                 "type": "string",
-                                "default": "name for statusbar",
-                                "description": "provided by extension:tasks\ncustom task name to show on statusbar"
+                                "default": "task name",
+                                "description": "Custom task name\nWill be deprecated, please use \"taskshere\" instead"
+                            },
+                            "tasksHereColor": {
+                                "type": "string",
+                                "default": "#0000ff",
+                                "format": "color",
+                                "description": "Custom task color\nWill be deprecated, please use \"taskshere\" instead"
+                            },
+                            "tasksHere": {
+                                "type": "object",
+                                "properties": {
+                                    "display": {
+                                        "type": "string",
+                                        "enum": ["hide", "show"],
+                                        "default": "hide",
+                                        "description": "set it as \"hide\"to hide the task on statusbar"
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "default": "task name",
+                                        "description": "Custom task name"
+                                    },
+                                    "color": {
+                                        "type": "string",
+                                        "default": "#0000ff",
+                                        "format": "color",
+                                        "description": "Custom task color"
+                                    }
+                                },
+                                "description": "Extension: Tasks Here"
                             }
-                        }
-                    },
-                    "statusBar": {
-                        "type": "object",
-                        "properties": {
-                            "show": {
-                                "type": "boolean",
-                                "default": true,
-                                "description": "provided by extension:tasks\nset it as \"hide\"to hide the task on statusbar"
-                            },
-                            "statusbarLabel": {
-                                "type": "string",
-                                "default": "name for statusbar",
-                                "description": "provided by extension:tasks\ncustom task name to show on statusbar"
-                            } 
                         }
                     }
                 }

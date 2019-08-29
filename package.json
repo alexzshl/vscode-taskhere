@@ -57,6 +57,11 @@
 					"default": true,
 					"description": "active"
 				},
+				"taskshere.color": {
+					"type": "string",
+					"default": "#000000",
+					"format": "color"
+				},
 				"taskshere.tasks": {
 					"type": "object",
 					"properties": {
@@ -79,7 +84,13 @@
 					}
 				}
 			}
-		}
+		},
+		"jsonValidation": [
+            {
+                "fileMatch": "tasks.json",
+				"url": "./resource/jshint.json"
+            }
+        ]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

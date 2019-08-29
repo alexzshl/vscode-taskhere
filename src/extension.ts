@@ -145,6 +145,7 @@ function loadTasks(context: vscode.ExtensionContext) {
 	// console.log(hide);
 
 	let conf: any = {};
+	let conf_a: any = {};
 
 	// get each task config
 	for (const workspaceFolder of vscode.workspace.workspaceFolders!) {
@@ -161,12 +162,19 @@ function loadTasks(context: vscode.ExtensionContext) {
 					name: undefined,
 					color: undefined
 				};
+				conf_a[id] = {
+					display: undefined,
+					name: undefined,
+					color: undefined
+				};
 				let display = getValue2(task, config, "options", "tasksHereDisplay");
 				let name = getValue2(task, config, "options", "tasksHereName");
 				let color = getValue2(task, config, "options", "tasksHereColor");
 				conf[id]["display"] = typeof display === 'string'? display : undefined;
 				conf[id]["name"] = typeof name === 'string' ? name : undefined;
 				conf[id]["color"] = typeof color === 'string' ? color : undefined;
+
+				conf_a[id] = getValue2(task, config, "options", "tasksHere") || conf_a[id];
 			}
 		}
 	}
@@ -184,19 +192,24 @@ function loadTasks(context: vscode.ExtensionContext) {
 			if (conf[taskId]["display"] === 'hide') {
 				continue;
 			}
+			if (!(taskId in conf_a)) {
+				continue;
+			}
+			if (conf_a[taskId]['display'] === 'hide') {
+				continue;
+			}
 			
-			let name = conf[taskId]["name"] || task.name;
+			let name = conf_a[taskId]["name"] || conf[taskId]["name"] || task.name;
 
 			const bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 50);
 			bar.text = name;
 			bar.command = 'alexzshl.tasksHere.exec-task-' + commandIndex++;
 			// bar.command = 'extension.alexzshl.vscodeTasks.' + task.name;
 			bar.tooltip = 'Task - ' + task.name;
-			bar.color = conf[taskId]["color"];
+			bar.color = conf_a[taskId]["color"] || conf[taskId]["color"];
 			bar.show();
 
 			statusBarArray.push(bar);
-
 			context.subscriptions.push(bar);
 			let disposable = vscode.commands.registerCommand(bar.command, async () => {
 				vscode.tasks.executeTask(task);
