@@ -96,4 +96,4 @@ Specify the color of the task name.You can use legal color expressions supported
         }
 ```
 
-![label_color](resource\image\label_color.png)
+![label_color](resource/image/label_color.png)
