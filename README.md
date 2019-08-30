@@ -2,7 +2,8 @@
 
 Load VSCode-tasks into status bar.
 
-[![version](https://img.shields.io/vscode-marketplace/v/alexzshl.tasks-here.svg?style=flat-square&label=VS%20Code%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=alexzshl.tasks-here)
+[![version](https://img.shields.io/vscode-marketplace/v/alexzshl.tasks-here.svg?style=flat-square&label=VS%20Code%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=alexzshl.tasks-here)
+[![GitHub](https://img.shields.io/github/license/alexzshl/vscode-taskshere?style=flat-square)](https://github.com/alexzshl/vscode-taskshere/blob/master/LICENSE)
 
 Notice: version 3.0.0 starts to use the new configuration form in **tasks.json**, the previous users please try to migrate.
 
@@ -10,7 +11,7 @@ Notice: version 3.0.0 starts to use the new configuration form in **tasks.json**
 
 This extension derived from another VSCode extension and based on v0.2.7.
 
-[![version](https://img.shields.io/vscode-marketplace/v/actboy168.tasks.svg?style=flat-square&label=VS%20Code%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=actboy168.tasks)
+[![version](https://img.shields.io/vscode-marketplace/v/actboy168.tasks.svg?style=flat-square&label=VS%20Code%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=actboy168.tasks)
 
 ## Preview
 
@@ -29,7 +30,7 @@ For ease of configuration,this extension personalize tasks with **tasks.json**.
 
 If you want to hide a task, add an configuration in tasks.json:
 
-[`*options-tasksHere-display*]
+[*options-tasksHere-display*]
 
 ```json
         {
@@ -49,7 +50,7 @@ If you want to hide a task, add an configuration in tasks.json:
 
 If the task name is too long to fit for display and you don't want to change it, you can customize it by add an configuration in tasks.json:
 
-[`*options-tasksHere-name*]
+[*options-tasksHere-name*]
 
 ```json
         {
@@ -72,7 +73,7 @@ If the task name is too long to fit for display and you don't want to change it,
 
 You can "add" a built-in icon to the task name with a special syntax, which will appear as an icon on the status bar:
 
-[`*options-tasksHere-name*]
+[*options-tasksHere-name*]
 
 ```json
         {
