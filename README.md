@@ -2,16 +2,16 @@
 
 Load VSCode-tasks into status bar.
 
-[![version](https://img.shields.io/vscode-marketplace/v/alexzshl.tasks-here.svg?style=flat-square&label=VS%20Code%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=alexzshl.tasks-here)
-[![GitHub](https://img.shields.io/github/license/alexzshl/vscode-taskshere?style=flat-square)](https://github.com/alexzshl/vscode-taskshere/blob/master/LICENSE)
+[![version](https://img.shields.io/visual-studio-marketplace/v/alexzshl.tasks-here?style=flat-square&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=alexzshl.tasks-here)
+[![license](https://img.shields.io/github/license/alexzshl/vscode-taskshere?style=flat-square)](https://github.com/alexzshl/vscode-taskshere/blob/master/LICENSE)
 
 Notice: version 3.0.0 starts to use the new configuration form in **tasks.json**, the previous users please try to migrate.
 
 ## Derived
 
-This extension derived from another VSCode extension and based on v0.2.7.
+This extension derived from another VSCode extension and based on v0.2.7:
 
-[![version](https://img.shields.io/vscode-marketplace/v/actboy168.tasks.svg?style=flat-square&label=VS%20Code%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=actboy168.tasks)
+[![version](https://img.shields.io/visual-studio-marketplace/v/actboy168.tasks?style=flat-square&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=actboy168.tasks)
 
 ## Preview
 
@@ -19,12 +19,12 @@ This extension derived from another VSCode extension and based on v0.2.7.
 
 ## Features
 
-- Load VSCode-tasks into status bar.
-- Customize the name of the status bar item.
-- Customize the name with VSCode builtin icons.
-- Customize the foreground of the status bar item.
+- Load VSCode-tasks into status bar
+- Customize the name of the status bar item
+- Customize the name with VSCode builtin icons
+- Customize the foreground of the status bar item
 
-## Task personalization
+## Configuration - tasks.json
 
 For ease of configuration,this extension personalize tasks with **tasks.json**.
 
@@ -93,7 +93,7 @@ You can "add" a built-in icon to the task name with a special syntax, which will
 
 ![icon-in-label](resource/image/new/label_icon.png)
 
-You can find a list of built-in icons provided by VSCode:
+You can find a list of built-in icons provided by VSCode on this page:
 
 [![icons-in-labels](https://img.shields.io/badge/VS%20Code-icons--in--labels-blue?logo=visual-studio-code&style=flat-square)](https://code.visualstudio.com/api/references/icons-in-labels)
 
