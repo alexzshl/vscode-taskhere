@@ -1,22 +1,35 @@
 # Tasks Here
 
-Load VSCode Tasks to Status Bar
+Load VSCode-tasks into status bar.
 
-Version-3.0.0 starts to use the new configuration form, the previous users please try to migrate. If there is any inconvenience, please forgive me
+[![version](https://img.shields.io/vscode-marketplace/v/alexzshl.tasks-here.svg?style=flat-square&label=VS%20Code%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=alexzshl.tasks-here)
 
-This extension evolved from *extension:actboy168.tasks*
+Notice: version 3.0.0 starts to use the new configuration form in **tasks.json**, the previous users please try to migrate.
+
+## Derived
+
+This extension derived from another VSCode extension and based on v0.2.7.
+
+[![version](https://img.shields.io/vscode-marketplace/v/actboy168.tasks.svg?style=flat-square&label=VS%20Code%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=actboy168.tasks)
 
 ## Preview
 
 ![preview](resource/image/preview.png)
 
-## Settings
+## Features
 
-We do some general configuration through the **settings.json**, as most extensions do.And also, for ease of configuration,we do some special configuration through the **tasks.json** for each task.If the configuration is done in the tasks.json, I will identify it above the code or image
+- Load VSCode-tasks into status bar.
+- Customize the name of the status bar item.
+- Customize the name with VSCode builtin icons.
+- Customize the foreground of the status bar item.
 
-This extension will show all vscode-tasks on the status bar.If you want to hide a task, add an configuration(*options-tasksHere-display*) like this:
+## Task personalization
 
-[*tasks.json*]
+For ease of configuration,this extension personalize tasks with **tasks.json**.
+
+If you want to hide a task, add an configuration in tasks.json:
+
+[`*options-tasksHere-display*]
 
 ```json
         {
@@ -34,9 +47,9 @@ This extension will show all vscode-tasks on the status bar.If you want to hide 
         }
 ```
 
-This extension uses the label of the task as the display name on the status bar. How ever, if the task name is too long to fit for display and you don't want to change it, you can customize the task name by add an configuration(*options-tasksHere-name*) like this:
+If the task name is too long to fit for display and you don't want to change it, you can customize it by add an configuration in tasks.json:
 
-[*tasks.json*]
+[`*options-tasksHere-name*]
 
 ```json
         {
@@ -57,9 +70,9 @@ This extension uses the label of the task as the display name on the status bar.
         }
 ```
 
-You can "add" a built-in icon to the task name with a special syntax, which will appear as an icon on the status bar
+You can "add" a built-in icon to the task name with a special syntax, which will appear as an icon on the status bar:
 
-[*tasks.json*]
+[`*options-tasksHere-name*]
 
 ```json
         {
@@ -79,11 +92,13 @@ You can "add" a built-in icon to the task name with a special syntax, which will
 
 ![icon-in-label](resource/image/new/label_icon.png)
 
-You can find a list of built-in icons provided by VSCode on this page: [icons-in-labels](https://code.visualstudio.com/api/references/icons-in-labels)
+You can find a list of built-in icons provided by VSCode:
 
-Specify the color of the task name.You can use legal color expressions supported by CSS. For example: "DeepPink", "#00f", "#adff2f". If you are not sure, you can use the search engine to search for the keyword "CSS color".Or use the color picker(hover over the color string) provided by vscode to select the color directly..Note that the color of the icon will change as well.
+[![icons-in-labels](https://img.shields.io/badge/VS%20Code-icons--in--labels-blue?logo=visual-studio-code&style=flat-square)](https://code.visualstudio.com/api/references/icons-in-labels)
 
-[*tasks.json*]
+You can specify the foreground of the task name.You can use legal color expressions supported by CSS. For example: "DeepPink", "#00f", "#adff2f".Or use the color picker(hover over the color string) provided by VSCode to select the color directly.If you use icon,the foreground of the icon will change as well.
+
+[*options-tasksHere-color*]
 
 ```json
        {
@@ -109,3 +124,19 @@ Specify the color of the task name.You can use legal color expressions supported
 ![label_color](resource/image/new/label_color.png)
 
 ![label_color](resource/image/new/labe_color_selector.png)
+
+## Settings
+
+Configuration with VSCode settings:
+
+- `taskshere.on` - Enable/Disable the extension
+- `taskshere.display` - Global display for tasks.Default is true.If you have too many tasks, you can set it to false, then display the tasks you want to display by configuring tasks.json
+- `taskshere.color` - Global foreground color for tasks
+
+## Commands
+
+The following commands are provided, which can be accessed from the command palette (F1), or bound to keys:
+
+- `taskshere.refresh`
+- `taskshere.on`
+- `taskshere.off`
