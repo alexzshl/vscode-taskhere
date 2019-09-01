@@ -1,15 +1,14 @@
 # Tasks Here
 
-Load VSCode-tasks into status bar.
-
 [![version](https://img.shields.io/visual-studio-marketplace/v/alexzshl.tasks-here?style=flat-square&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=alexzshl.tasks-here)
-[![license](https://img.shields.io/github/license/alexzshl/vscode-taskshere?style=flat-square)](https://github.com/alexzshl/vscode-taskshere/blob/master/LICENSE)
+
+Load VSCode tasks into status bar.
 
 Notice: version 3.0.0 starts to use the new configuration form in **tasks.json**, the previous users please try to migrate.
 
 ## Derived
 
-This extension derived from another VSCode extension - [actboy168.tasks](https://marketplace.visualstudio.com/items?itemName=actboy168.tasks) and based on v0.2.7.
+Derived from VSCode extension - [actboy168.tasks](https://marketplace.visualstudio.com/items?itemName=actboy168.tasks) and based on v0.2.7.
 
 ## Preview
 
@@ -17,16 +16,16 @@ This extension derived from another VSCode extension - [actboy168.tasks](https:/
 
 ## Features
 
-- Load VSCode-tasks into status bar
-- Customize the name of the status bar item
+- Load VSCode tasks into status bar
+- Customize the name of the task-bar
 - Customize the name with VSCode builtin icons
-- Customize the foreground of the status bar item
+- Customize the color of the task-bar
 
 ## Configuration - tasks.json
 
 For ease of configuration,this extension personalize tasks with **tasks.json**.
 
-If you want to hide a task, add an configuration in tasks.json:
+If you want to hide a task, add a configuration in tasks.json:
 
 [*options-tasksHere-display*]
 
@@ -46,7 +45,7 @@ If you want to hide a task, add an configuration in tasks.json:
         }
 ```
 
-If the task name is too long to fit for display and you don't want to change it, you can customize it by add an configuration in tasks.json:
+If the task label is too long to fit for display and you don't want to modify it, you can customize a name for task-bar by add a configuration in tasks.json:
 
 [*options-tasksHere-name*]
 
@@ -69,7 +68,7 @@ If the task name is too long to fit for display and you don't want to change it,
         }
 ```
 
-You can "add" a built-in icon to the task name with a special syntax, which will appear as an icon on the status bar:
+You can "add" one or more built-in icons to the name of task-bar with a special syntax, which will appear as an icon on the status bar:
 
 [*options-tasksHere-name*]
 
@@ -91,9 +90,9 @@ You can "add" a built-in icon to the task name with a special syntax, which will
 
 ![icon-in-label](resource/image/new/label_icon.png)
 
-You can find a list of built-in icons provided by VSCode on this page: [icons-in-labels](https://code.visualstudio.com/api/references/icons-in-labels).
+The list of built-in icons provided by VSCode on this page: [icons-in-labels](https://code.visualstudio.com/api/references/icons-in-labels).
 
-You can specify the foreground of the task name.You can use legal color expressions supported by CSS. For example: "DeepPink", "#00f", "#adff2f".Or use the color picker(hover over the color string) provided by VSCode to select the color directly.If you use icon,the foreground of the icon will change as well.
+You can specify the color of task-bar with color expressions supported by CSS. For example: "DeepPink", "#00f", "#adff2f".Or use the color picker to select color directly.The color of icon will change as well.
 
 [*options-tasksHere-color*]
 
@@ -127,13 +126,13 @@ You can specify the foreground of the task name.You can use legal color expressi
 Configuration with VSCode settings:
 
 - `taskshere.on` - Enable/Disable the extension
-- `taskshere.display` - Global display for tasks.Default is true.If you have too many tasks, you can set it to false, then display the tasks you want to display by configuring tasks.json
-- `taskshere.color` - Global foreground color for tasks
+- `taskshere.display` - If you have too many tasks, you can set it to **false**, then display the tasks you want to display by configuring **tasks.json**
+- `taskshere.color` - Global color for task-bar
 
 ## Commands
 
 The following commands are provided, which can be accessed from the command palette (F1), or bound to keys:
 
-- `taskshere.refresh`
+- `taskshere.refresh` - reload tasks into status bar
 - `taskshere.on`
 - `taskshere.off`

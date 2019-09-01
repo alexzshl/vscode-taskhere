@@ -210,12 +210,14 @@ function loadTasks(context: vscode.ExtensionContext) {
 			let name = conf_a[taskId]["name"] || conf[taskId]["name"] || task.name;
 			let priority: number | undefined = vscode.workspace.getConfiguration().get("taskshere.priority");
 			let color: string | undefined = vscode.workspace.getConfiguration().get("taskshere.color");
+			let showTooltip: boolean | undefined = vscode.workspace.getConfiguration().get("taskshere.showTooltip");
+			
 			const bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, priority);
 			bar.text = name;
+			bar.tooltip = showTooltip ? ('Task - ' + task.name) : '';
+			bar.color = conf_a[taskId]["color"] || conf[taskId]["color"] || color;
 			bar.command = 'alexzshl.tasksHere.exec-task-' + commandIndex++;
 			// bar.command = 'extension.alexzshl.vscodeTasks.' + task.name;
-			bar.tooltip = 'Task - ' + task.name;
-			bar.color = conf_a[taskId]["color"] || conf[taskId]["color"] || color;
 			bar.show();
 
 			statusBarArray.push(bar);

@@ -5,6 +5,7 @@
 	},
 	"publisher": "alexzshl",
 	"version": "3.1.2",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/alexzshl/vscode-taskshere"
@@ -60,19 +61,24 @@
 				"taskshere.display": {
 					"type": "boolean",
 					"default": true,
-					"description": "Global display for status bar item"
+					"description": "Global settings - display. Controls whether tasks are displayed on the status bar"
 				},
 				"taskshere.color": {
 					"type": "string",
 					"format": "color",
-					"description": "Global color for status bar item"
+					"description": "Global settings - color.Specify the color of the task-bars"
 				},
 				"taskshere.priority": {
 					"type": "number",
 					"default": 50,
 					"minimum": 0,
 					"maximum": 9999,
-					"description": "The priority of the status bar item. Higher values mean the item should be shown more to the left"
+					"description": "The priority of the task-bars. Higher values mean the item should be shown more to the left"
+				},
+				"taskshere.showTooltip": {
+					"type": "boolean",
+					"default": false,
+					"description": "Controls whether to display the tooltip of the task-bar"
 				},
 				"taskshere.tasks": {
 					"type": "object",
