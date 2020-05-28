@@ -4,7 +4,7 @@
 
 Load VSCode tasks into status bar.
 
-Notice: version 3.0.0 starts to use the new configuration form in **tasks.json**, the previous users please try to migrate.
+Notice: version 3.0.0 starts to use a new configuration form in **tasks.json**, the previous users please try to migrate.
 
 ## Derived
 
@@ -68,7 +68,7 @@ If the task label is too long to fit for display and you don't want to modify it
         }
 ```
 
-You can "add" one or more built-in icons to the name of task-bar with a special syntax, which will appear as an icon on the status bar:
+You can add built-in icons to the status bar item:
 
 [*options-tasksHere-name*]
 
@@ -90,9 +90,9 @@ You can "add" one or more built-in icons to the name of task-bar with a special 
 
 ![icon-in-label](resource/image/new/label_icon.png)
 
-The list of built-in icons provided by VSCode on this page: [icons-in-labels](https://code.visualstudio.com/api/references/icons-in-labels).
+The list of built-in icons can be getting from this page: [icons-in-labels](https://code.visualstudio.com/api/references/icons-in-labels).
 
-You can specify the color of task-bar with color expressions supported by CSS. For example: "DeepPink", "#00f", "#adff2f".Or use the color picker to select color directly.The color of icon will change as well.
+You can specify the color also. For example: "DeepPink", "#00f", "#adff2f".Or use the color picker to select a color directly. The color of the icon will change as well.
 
 [*options-tasksHere-color*]
 
