@@ -8,7 +8,7 @@ Notice: version 3.0.0 starts to use a new configuration form in **tasks.json**, 
 
 ## Derived
 
-Derived from VSCode extension - [actboy168.tasks](https://marketplace.visualstudio.com/items?itemName=actboy168.tasks) and based on v0.2.7.
+Derived from VSCode extension - [actboy168.tasks v0.2.7](https://marketplace.visualstudio.com/items?itemName=actboy168.tasks).
 
 ## Preview
 
