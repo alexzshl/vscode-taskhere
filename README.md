@@ -131,7 +131,7 @@ Configuration with VSCode settings:
 
 ## Commands
 
-The following commands are provided, which can be accessed from the command palette (F1), or bound to keys:
+We provide this commands. How ever, you don't need to use them usually.
 
 - `taskshere.refresh` - reload tasks into status bar
 - `taskshere.on`
