@@ -1,5 +1,7 @@
 # Tasks Here
 
+**deprecated!!!**
+
 [![version](https://img.shields.io/visual-studio-marketplace/v/alexzshl.tasks-here?style=flat-square&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=alexzshl.tasks-here)
 
 Load VSCode tasks into status bar.
